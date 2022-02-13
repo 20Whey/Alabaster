@@ -1,5 +1,7 @@
 package com.stoneshapers.albrgw;
 
+import com.stoneshapers.albrgw.setup.ModSetup;
+import com.stoneshapers.albrgw.setup.Registration;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;

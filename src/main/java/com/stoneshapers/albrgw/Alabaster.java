@@ -1,5 +1,6 @@
 package com.stoneshapers.albrgw;
 
+import com.stoneshapers.albrgw.setup.ClientSetup;
 import com.stoneshapers.albrgw.setup.ModSetup;
 import com.stoneshapers.albrgw.setup.Registration;
 import net.minecraft.world.level.block.Block;
@@ -35,6 +36,6 @@ public class Alabaster
 
         IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
         modbus.addListener(ModSetup::init);
-        DistExecutor.unsafeCallWhenOn(Dist.CLIENT, () -> () -> modbus.addListener(ClientSetup::init));
+        DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modbus.addListener(ClientSetup::init));
     }
 }
